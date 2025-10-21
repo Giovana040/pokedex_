@@ -28,16 +28,13 @@ const renderPokemon = async (pokemon)=> {
         pokemon_number.innerHTML = data.id;
         pokemon_img.src = data[sprites][versions][generation-v][black-white][animated][front_default];
     } else{
-        pokemon_name.innerHTML = Não Encontrado;
+        pokemon_name.innerHTML = NãoEncontrado;
         pokemon_number.innerHTML = ``
         pokemon_img.style.display= nome;
     }
 }
 
-
-
-
-pokemon_form.addEventListener("submit"), (Event)=>{
+pokemon_form.addEventListener("submit", (Event)=>{
     Event.preventDefault();
     console.log("Enviando Formulario",pokemon_imput.value);
     renderPokemon(pokemon_imput.value.toLowerCase());
